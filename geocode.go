@@ -64,6 +64,7 @@ type Request struct {
 	Region   string // used by GOOGLE
 	Language string // used by GOOGLE
 	Sensor   bool   // used by GOOGLE
+	Components string // used by GOOGLE
 
 	values url.Values
 }
@@ -117,6 +118,9 @@ func (r *Request) Values() url.Values {
 		}
 		if r.Language != "" {
 			v.Set("language", r.Language)
+		}
+		if r.Components != "" {
+			v.Set("components", r.Components)
 		}
 		v.Set("sensor", strconv.FormatBool(r.Sensor))
 		v.Set("key", r.Key)
