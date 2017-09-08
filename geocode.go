@@ -59,11 +59,11 @@ type Request struct {
 	// For routing, bounds must be set
 	Bounds *Bounds // used by GOOGLE and YOURS
 
-	Limit    int64  // used by OSM
-	Key      string // used by OSM and GOOGLE
-	Region   string // used by GOOGLE
-	Language string // used by GOOGLE
-	Sensor   bool   // used by GOOGLE
+	Limit      int64  // used by OSM
+	Key        string // used by OSM and GOOGLE
+	Region     string // used by GOOGLE
+	Language   string // used by GOOGLE
+	Sensor     bool   // used by GOOGLE
 	Components string // used by GOOGLE
 
 	values url.Values
